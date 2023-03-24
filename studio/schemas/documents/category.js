@@ -1,40 +1,40 @@
-import { MdPerson } from 'react-icons/md';
+import { MdCategory } from 'react-icons/md';
 
 export default {
-  title: 'Author',
-  name: 'author',
+  title: 'Category',
+  name: 'category',
   type: 'document',
-  icon: MdPerson,
+  icon: MdCategory,
   fields: [
     {
-      name: 'name',
-      title: 'Name',
+      name: 'title',
+      title: 'Title',
       type: 'string',
     },
     {
-      title: 'Slug',
       name: 'slug',
+      title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'title',
         maxLength: 96,
       },
     },
     {
-      title: 'Profile Image',
-      name: 'profileImage',
+      title: 'Cover Image',
+      name: 'coverImage',
       type: 'customImage',
     },
     {
-      title: 'Bio',
-      name: 'bio',
+      name: 'description',
+      title: 'Description',
       type: 'bodyText',
     },
   ],
   preview: {
     select: {
-      title: 'name',
-      image: 'profileImage',
+      title: 'title',
+      image: 'coverImage',
       slug: 'slug',
     },
     prepare({ title, image, slug }) {
