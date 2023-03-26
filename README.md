@@ -49,3 +49,11 @@ sanity terminal
 - npm install -g @sanity/cli
 - cd studio
 - sanity init --reconfigure
+
+sanity dataset (import data)
+
+- sanity dataset import ./data/sample-data.tar.gz production --replace
+
+deploy sanity studio
+
+- sanity deploy
