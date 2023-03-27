@@ -57,3 +57,13 @@ sanity dataset (import data)
 deploy sanity studio
 
 - sanity deploy
+
+Run and start GraphQL in web
+
+- npm run dev
+
+Add new plugins in gatsby-config file:
+
+- 'gatsby-plugin-image',
+- 'gatsby-plugin-sharp',
+- 'gatsby-transform-sharp',

@@ -1,19 +1,6 @@
 import React from 'react';
+import HeroSection from '../components/homepage/HeroSection';
 
-const IndexPage = () => (
-  <>
-    <h1>Welcome to "Phat-Blog" Project</h1>
-    <h2>
-      - by{' '}
-      <a
-        href="https://youtube.com/webcifarOfficial"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Web Cifar
-      </a>
-    </h2>
-  </>
-);
+const IndexPage = () => <HeroSection />;
 
 export default IndexPage;

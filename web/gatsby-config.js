@@ -6,5 +6,9 @@ module.exports = {
     siteUrl: `https://techhub-blog.netlify.com`,
     description: `Phat Blog is a platform for latest technology news and updates.`,
   },
-  plugins: [],
+  plugins: [
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+  ],
 };
