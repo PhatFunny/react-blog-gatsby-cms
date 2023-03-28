@@ -71,3 +71,7 @@ Add new plugins in gatsby-config file:
 Sanity graphql deploy
 
 - sanity graphql deploy
+
+Fix sanity graphql deploy error
+
+- sanity upgrade
