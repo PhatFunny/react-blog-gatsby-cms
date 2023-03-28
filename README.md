@@ -67,3 +67,7 @@ Add new plugins in gatsby-config file:
 - 'gatsby-plugin-image',
 - 'gatsby-plugin-sharp',
 - 'gatsby-transform-sharp',
+
+Sanity graphql deploy
+
+- sanity graphql deploy
