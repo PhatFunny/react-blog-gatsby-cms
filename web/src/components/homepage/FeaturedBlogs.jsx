@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { FeaturedBlogsStyles } from '../../styles/homePage/FeaturedBlogsStyles';
 import { SectionTitle } from '../typography/Title';
 import ParagraphText from '../typography/ParagraphText';
-import BlogGrid from '../blogs/BlogGrid';
+import BlogGrid from '../blog/BlogGrid';
 
 function FeaturedBlogs() {
   const data = useStaticQuery(graphql`
@@ -36,8 +36,6 @@ function FeaturedBlogs() {
   `);
 
   const featuredBlogs = data.allSanityFeatured.nodes[0].blogs;
-
-  console.log(featuredBlogs);
 
   return (
     <FeaturedBlogsStyles>
