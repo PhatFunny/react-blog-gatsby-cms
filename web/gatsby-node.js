@@ -6,6 +6,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const singleCategoryTemplate = require.resolve(
     './src/templates/single-category.js'
   );
+  const categoryListTemplate = require.resolve(
+    './src/templates/category-list.js'
+  );
 
   const { createPage } = actions;
   const result = await graphql(`
@@ -61,6 +64,21 @@ exports.createPages = async ({ graphql, actions }) => {
         limit: postsPerPage,
         offset: index * postsPerPage,
         numberOfPages: totalBlogListPages,
+        currentPage: index + 1,
+      },
+    });
+  });
+
+  // category-list-page
+  const totalCategoryListPages = Math.ceil(categories.length / postsPerPage);
+  Array.from({ length: totalCategoryListPages }).forEach((_, index) => {
+    createPage({
+      path: index === 0 ? '/categories' : `/categories/${index + 1}`,
+      component: categoryListTemplate,
+      context: {
+        limit: postsPerPage,
+        offset: index * postsPerPage,
+        numberOfPages: totalCategoryListPages,
         currentPage: index + 1,
       },
     });
